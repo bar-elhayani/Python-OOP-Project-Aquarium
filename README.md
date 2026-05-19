@@ -1,28 +1,30 @@
 # Python-OOP-Project-Aquarium
 
-A terminal-based aquarium simulation built in Python using object-oriented design principles.
+# OOP Aquarium
+
+A Python aquarium simulation demonstrating core object-oriented programming principles
+through a hierarchy of marine animals living in a dynamic grid-based aquarium.
+
+## Class Hierarchy
+- **Animal** — Abstract base class defining shared behavior: food management, aging, movement, and death
+- **Fish** — Extends Animal with vertical direction for diagonal swimming
+- **Crab** — Extends Animal with horizontal-only movement
+- **Molly / Scalar** — Concrete Fish subclasses with unique shapes and movement
+- **Ocypode / Shrimp** — Concrete Crab subclasses that reverse direction on collision
+- **Aquarium** — Manages the grid, animal placement, step simulation, and collision detection
+- **Exceptions** — Custom exceptions for invalid input, placement conflicts, and size constraints
+
+## OOP Concepts
+- **Inheritance** — Multi-level hierarchy: Animal → Fish/Crab → specific animal types
+- **Polymorphism** — Each animal implements its own `move()` and `get_animal()` behavior
+- **Abstraction** — Animal and intermediate classes define abstract methods enforced in subclasses
+- **Encapsulation** — Animal state (food, age, position) managed through dedicated methods
 
 ## Features
-- Add and manage animals in a dynamic aquarium grid
-- Simulate movement, feeding, aging, and death
-- Collision detection between animals
-- Menu-based user interface
-
-## Animals
-- **Molly / Scalar** — Fish that swim diagonally (horizontal + vertical movement)
-- **Ocypode / Shrimp** — Crabs that walk along the ocean floor; reverse direction on collision
-
-## Code Structure
-- **Animal** — Abstract base class for all animals; handles food, age, movement, and death
-- **Fish** — Extends Animal; adds vertical direction for diagonal swimming
-- **Crab** — Extends Animal; horizontal movement only
-- **Molly / Scalar** — Fish subclasses with unique ASCII representations
-- **Ocypode / Shrimp** — Crab subclasses with unique ASCII representations
-- **Aquarium** — Manages the grid, animal placement, movement simulation, and collision detection
-- **Exceptions** — Custom exceptions for invalid input, placement conflicts, and aquarium size
-
-## Requirements
-Python 3.x — no external libraries needed
+- Dynamic grid simulation with ASCII-rendered animals
+- Collision detection between crabs with direction reversal
+- Food, aging, and death mechanics per simulation step
+- Custom exception handling for invalid operations
 
 ## Usage
 ```bash
@@ -33,7 +35,3 @@ python main.py
 ```bash
 python -m pytest test_Molly.py
 ```
-
-## Authors
-Bar Elhayani
-Ben-Gurion University — Introduction to Computer Science Course
