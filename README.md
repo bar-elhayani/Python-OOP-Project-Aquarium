@@ -35,3 +35,7 @@ python main.py
 ```bash
 python -m pytest test_Molly.py
 ```
+
+## Authors
+Bar Elhayani  
+Ben-Gurion University — Introduction to Computer Science Course
